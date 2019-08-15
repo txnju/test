@@ -1,0 +1,43 @@
+default: !!map
+  user: !!map  # this is user1
+    # this is user2
+    name: !!str "standlove231x"
+    contacts: !!seq  # user's contacts
+      - !!str "standlove2"  # f sdf sdf sdf
+        # f sdf sda
+    app: !!map
+      user: !!map
+        admin: !!map
+          child1: !!map
+            child2: !!map
+              child3: !!map
+                name: !!str "child-value"  # long commetnfa das das daskfjhsa flhksfalksjflkjdkf kldslksd lkfklsdf sdf
+                  # fsdf dsfdsa fhl kdjfdjsfkjsd
+                  # sdf sdfasjf;lja;ljf sdfads fldsk
+                  # fdsfds fsdfsd
+    apps: !!seq
+      - !!map
+        name: !!str "yaml-editor"
+        version: !!str "1.0"
+        age: !!int 12
+      - !!map
+        name: !!str "yaml-editor"
+        version: !!str "1.0"
+        age: !!int 132
+        tester: !!str "standlove"
+  app: !!str "yaml editor"
+  adminURL: !!str "http://{host}:3000/admin"
+  host: !!str "localhost"
+environments: !!map
+  dev: !!map
+    user: !!map
+      name: !!str "levy"
+      apps: !!seq
+        - !!map
+          name: !!str "yaml-editor-1"
+          version: !!str "1.0.1"
+          age: !!int 12
+    adminURL: !!str "http://{host}:3000/devAdmin"  # no comment
+  prod: !!map
+    inherits: !!str "dev"
+  staging: !!map

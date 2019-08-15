@@ -1,0 +1,23 @@
+default: !!map
+  df: !!seq
+    - !!int -121
+    - !!int 2
+  user: !!map  # test1
+    # test2
+    name: !!str "stndlove2"
+    age: !!float .inf
+    contacts: !!seq
+      - !!str "user1"
+environments: !!map
+  staging: !!map
+    df: !!seq
+      - !!int -121
+      - !!int 2
+    user: !!map  # test1
+      # test2
+      name: !!str "stndlove"
+      age: !!int 13
+      contacts: !!seq
+        - !!str "user1"
+  dev: !!map
+    inherits: !!str "staging"

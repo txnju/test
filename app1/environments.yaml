@@ -1,0 +1,6 @@
+default: !!map
+
+environments: !!map
+  dev: !!map
+  prod: !!map
+  staging: !!map
